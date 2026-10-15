@@ -1,0 +1,9 @@
+{
+  "_descripcion": "Salida del nodo 'Validar y normalizar' (Code). Si valido = false, el flujo va a 'Registrar error de validación' y NO llama a la IA.",
+  "valido": true,
+  "errores": "",
+  "nombre": "Martin",
+  "email": "cliente@ejemplo.com",
+  "telefono": "1123456789",
+  "mensaje": "Hola, quiero pasarme de compañía. Tengo un Toyota Corolla 2020, ..."
+}

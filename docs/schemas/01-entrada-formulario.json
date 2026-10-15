@@ -1,0 +1,9 @@
+{
+  "_descripcion": "Salida del nodo 'Formulario de cotización' (n8n Form Trigger). Es la entrada del sistema.",
+  "Nombre": "Martin",
+  "Email": "cliente@ejemplo.com",
+  "Telefono": "1123456789",
+  "Mensaje": "Hola, quiero pasarme de compañía. Tengo un Toyota Corolla 2020, uso particular, CP 1704, quiero todo riesgo. Mi póliza actual vence la semana que viene.",
+  "submittedAt": "2026-10-14T21:05:09.000-03:00",
+  "formMode": "production"
+}

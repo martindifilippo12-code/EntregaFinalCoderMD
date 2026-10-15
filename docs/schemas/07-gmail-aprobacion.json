@@ -1,0 +1,4 @@
+{
+  "_descripcion": "Salida del nodo 'Pedir aprobación (Human-in-the-loop)' (Gmail Send and Wait, aprobación doble). El flujo queda en pausa (estado Waiting) hasta que el productor hace clic.",
+  "data": { "approved": true }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Respuesta del modelo (gpt-4o-mini)",
+  "description": "Contrato que el prompt de sistema exige al LLM. El nodo 'Interpretar respuesta IA' valida este formato; si no se cumple, el flujo va a la ruta de error.",
+  "type": "object",
+  "required": ["tipo_seguro", "datos_extraidos", "datos_faltantes", "prioridad", "motivo_prioridad", "respuesta_sugerida"],
+  "properties": {
+    "tipo_seguro": { "type": "string", "enum": ["Auto", "Hogar", "Comercio", "Vida", "Otro"] },
+    "datos_extraidos": { "type": "object", "description": "Solo datos que el cliente dio explícitamente (marca, modelo, anio, codigo_postal, uso, cobertura, metros_cuadrados, rubro, edad, compania_actual, vencimiento...)." },
+    "datos_faltantes": { "type": "array", "items": { "type": "string" } },
+    "prioridad": { "type": "string", "enum": ["Alta", "Media", "Baja"] },
+    "motivo_prioridad": { "type": "string" },
+    "respuesta_sugerida": { "type": "string", "description": "Email para el cliente. Máx. 120 palabras, sin precios ni promesas de cobertura." }
+  },
+  "examples": [
+    {
+      "tipo_seguro": "Auto",
+      "datos_extraidos": { "marca": "Toyota", "modelo": "Corolla", "anio": "2020", "codigo_postal": "1704", "uso": "particular", "cobertura": "todo riesgo", "vencimiento": "la semana que viene" },
+      "datos_faltantes": [],
+      "prioridad": "Alta",
+      "motivo_prioridad": "Quiere cambiarse de compañía y su póliza vence en menos de 30 días.",
+      "respuesta_sugerida": "Hola Martin, gracias por contactarnos. Para avanzar con la cotización de tu Toyota Corolla 2020 a todo riesgo ya tenemos toda la información necesaria..."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_descripcion": "Body enviado a la API de Airtable. POST /v0/{baseId}/Solicitudes crea el registro (Estado = Pendiente); PATCH /v0/{baseId}/Solicitudes/{recordId} lo actualiza en cada etapa.",
+  "crear": {
+    "typecast": true,
+    "fields": {
+      "Cliente": ["recXXXXXXXXXXXXXX"],
+      "Mensaje Original": "Hola, quiero pasarme de compañía...",
+      "Estado": "Pendiente"
+    }
+  },
+  "guardar_analisis": {
+    "typecast": true,
+    "fields": {
+      "Tipo de Seguro": "Auto",
+      "Datos Extraidos": "{ \"marca\": \"Toyota\", ... }",
+      "Datos Faltantes": "Ninguno",
+      "Prioridad": "Alta",
+      "Motivo Prioridad": "Quiere cambiarse de compañía...",
+      "Respuesta Sugerida": "Hola Martin, ...",
+      "Estado": "Procesado por IA",
+      "Tokens usados": 675
+    }
+  },
+  "aprobacion": { "typecast": true, "fields": { "Estado": "Aprobado por Humano", "Fecha Aprobacion": "2026-10-14T21:08:02-03:00" } },
+  "envio": { "typecast": true, "fields": { "Estado": "Enviado" } },
+  "rechazo": { "typecast": true, "fields": { "Estado": "Rechazado", "Fecha Aprobacion": "2026-10-15T07:57:00-03:00" } },
+  "error": { "typecast": true, "fields": { "Estado": "Error" } }
+}

@@ -1,0 +1,10 @@
+{
+  "_descripcion": "Salida del nodo 'Interpretar respuesta IA' (Code). Normaliza valores fuera de las listas permitidas y cuenta tokens.",
+  "tipo": "Auto",
+  "prioridad": "Alta",
+  "motivo": "Quiere cambiarse de compañía y su póliza vence en menos de 30 días.",
+  "datosExtraidos": "{\n  \"marca\": \"Toyota\",\n  \"modelo\": \"Corolla\",\n  \"anio\": \"2020\" ... }",
+  "datosFaltantes": "Ninguno",
+  "respuesta": "Hola Martin, gracias por contactarnos...",
+  "tokens": 675
+}

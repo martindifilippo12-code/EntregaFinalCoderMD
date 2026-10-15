@@ -1,0 +1,11 @@
+{
+  "_descripcion": "POST /v0/{baseId}/Log Errores. Lo usan: la rama de validación, la rama de error de IA y el workflow de errores (Error Trigger).",
+  "typecast": true,
+  "fields": {
+    "Workflow": "ENTREGA FINAL",
+    "Nodo": "Analizar con IA / Interpretar respuesta",
+    "Mensaje de Error": "La IA no devolvió un JSON válido: {\"tipo_",
+    "Execution ID": "121",
+    "Solicitud": ["recXXXXXXXXXXXXXX"]
+  }
+}

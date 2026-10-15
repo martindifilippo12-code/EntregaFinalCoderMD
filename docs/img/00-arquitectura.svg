@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="980" viewBox="0 0 1720 980" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="m-def" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/></marker>
+<marker id="m-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803D"/></marker>
+<marker id="m-err" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+<marker id="m-db" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+</defs>
+<rect width="1720" height="980" fill="#FFFFFF"/>
+<text x="40" y="58" font-size="26" font-weight="800" fill="#111827">Ecosistema de Automatización IA · Triage de Cotizaciones de Seguros</text>
+<text x="40" y="88" font-size="15" fill="#4B5563">n8n Cloud (orquestador) · Airtable (base de datos y memoria) · OpenAI gpt-4o-mini (procesamiento) · Gmail (aprobación y salida)</text>
+<line x1="40" y1="108" x2="1680" y2="108" stroke="#E5E7EB" stroke-width="2"/>
+<text x="40" y="695" font-size="13" font-weight="700" fill="#B91C1C" letter-spacing="1">RUTAS DE ERROR (RESILIENCIA)</text>
+<line x1="40" y1="682" x2="1680" y2="682" stroke="#F3D0D0" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="40" y="150" width="200" height="104" rx="12" fill="#E6F6F4" stroke="#0F766E" stroke-width="2"/>
+<rect x="40" y="150" width="6" height="104" rx="3" fill="#0F766E"/>
+<text x="143.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">1. Formulario n8n</text>
+<text x="143.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Form Trigger</text>
+<text x="143.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">(se dispara solo al enviar)</text>
+<rect x="270" y="150" width="200" height="104" rx="12" fill="#F1F2F4" stroke="#475569" stroke-width="2"/>
+<rect x="270" y="150" width="6" height="104" rx="3" fill="#475569"/>
+<text x="373.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">2. Config + Validar</text>
+<text x="373.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Variables centralizadas</text>
+<text x="373.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">Code + IF (filtro)</text>
+<rect x="500" y="150" width="200" height="104" rx="12" fill="#FFF4E0" stroke="#B45309" stroke-width="2"/>
+<rect x="500" y="150" width="6" height="104" rx="3" fill="#B45309"/>
+<text x="603.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">3. Airtable</text>
+<text x="603.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Upsert Cliente (por email)</text>
+<text x="603.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">Solicitud → Pendiente</text>
+<rect x="730" y="150" width="200" height="104" rx="12" fill="#F1EAFE" stroke="#6D28D9" stroke-width="2"/>
+<rect x="730" y="150" width="6" height="104" rx="3" fill="#6D28D9"/>
+<text x="833.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">4. OpenAI gpt-4o-mini</text>
+<text x="833.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Prompt JSON estructurado</text>
+<text x="833.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">max 600 tokens · temp 0.2</text>
+<rect x="960" y="150" width="200" height="104" rx="12" fill="#F1F2F4" stroke="#475569" stroke-width="2"/>
+<rect x="960" y="150" width="6" height="104" rx="3" fill="#475569"/>
+<text x="1063.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">5. Interpretar IA</text>
+<text x="1063.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Code: valida y</text>
+<text x="1063.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">normaliza el JSON</text>
+<rect x="1190" y="150" width="200" height="104" rx="12" fill="#FFF4E0" stroke="#B45309" stroke-width="2"/>
+<rect x="1190" y="150" width="6" height="104" rx="3" fill="#B45309"/>
+<text x="1293.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">6. Airtable</text>
+<text x="1293.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Guarda análisis</text>
+<text x="1293.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">→ Procesado por IA</text>
+<rect x="1420" y="150" width="200" height="104" rx="12" fill="#E8F0FE" stroke="#1D4ED8" stroke-width="2"/>
+<rect x="1420" y="150" width="6" height="104" rx="3" fill="#1D4ED8"/>
+<text x="1523.0" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">7. Gmail Send &amp; Wait</text>
+<text x="1523.0" y="204" text-anchor="middle" font-size="12.5" fill="#374151">Human-in-the-loop</text>
+<text x="1523.0" y="222" text-anchor="middle" font-size="12.5" fill="#374151">Aprobar / Rechazar</text>
+<rect x="1420" y="390" width="200" height="104" rx="12" fill="#E8F0FE" stroke="#1D4ED8" stroke-width="2"/>
+<rect x="1420" y="390" width="6" height="104" rx="3" fill="#1D4ED8"/>
+<text x="1523.0" y="420" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">8. ¿Aprobado?</text>
+<text x="1523.0" y="444" text-anchor="middle" font-size="12.5" fill="#374151">IF sobre la respuesta</text>
+<text x="1523.0" y="462" text-anchor="middle" font-size="12.5" fill="#374151">del productor</text>
+<rect x="1190" y="390" width="200" height="104" rx="12" fill="#FFF4E0" stroke="#B45309" stroke-width="2"/>
+<rect x="1190" y="390" width="6" height="104" rx="3" fill="#B45309"/>
+<text x="1293.0" y="420" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Airtable</text>
+<text x="1293.0" y="444" text-anchor="middle" font-size="12.5" fill="#374151">→ Aprobado por Humano</text>
+<text x="1293.0" y="462" text-anchor="middle" font-size="12.5" fill="#374151">+ Fecha Aprobacion</text>
+<rect x="960" y="390" width="200" height="104" rx="12" fill="#E8F7EC" stroke="#15803D" stroke-width="2"/>
+<rect x="960" y="390" width="6" height="104" rx="3" fill="#15803D"/>
+<text x="1063.0" y="420" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Gmail al cliente</text>
+<text x="1063.0" y="444" text-anchor="middle" font-size="12.5" fill="#374151">Envía la respuesta</text>
+<text x="1063.0" y="462" text-anchor="middle" font-size="12.5" fill="#374151">aprobada (retry x3)</text>
+<rect x="730" y="390" width="200" height="104" rx="12" fill="#FFF4E0" stroke="#B45309" stroke-width="2"/>
+<rect x="730" y="390" width="6" height="104" rx="3" fill="#B45309"/>
+<text x="833.0" y="420" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Airtable</text>
+<text x="833.0" y="444" text-anchor="middle" font-size="12.5" fill="#374151">→ Enviado</text>
+<rect x="1420" y="560" width="200" height="104" rx="12" fill="#FFF4E0" stroke="#B45309" stroke-width="2"/>
+<rect x="1420" y="560" width="6" height="104" rx="3" fill="#B45309"/>
+<text x="1523.0" y="590" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Airtable</text>
+<text x="1523.0" y="614" text-anchor="middle" font-size="12.5" fill="#374151">→ Rechazado</text>
+<text x="1523.0" y="632" text-anchor="middle" font-size="12.5" fill="#374151">(no se contacta al cliente)</text>
+<rect x="40" y="390" width="200" height="104" rx="12" fill="#E8F7EC" stroke="#15803D" stroke-width="2"/>
+<rect x="40" y="390" width="6" height="104" rx="3" fill="#15803D"/>
+<text x="143.0" y="420" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Dashboard KPIs</text>
+<text x="143.0" y="444" text-anchor="middle" font-size="12.5" fill="#374151">Airtable Shared View</text>
+<text x="143.0" y="462" text-anchor="middle" font-size="12.5" fill="#374151">volumen · aprobación · errores</text>
+<rect x="270" y="790" width="200" height="104" rx="12" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+<rect x="270" y="790" width="6" height="104" rx="3" fill="#B91C1C"/>
+<text x="373.0" y="820" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Log Errores</text>
+<text x="373.0" y="844" text-anchor="middle" font-size="12.5" fill="#374151">Datos inválidos</text>
+<text x="373.0" y="862" text-anchor="middle" font-size="12.5" fill="#374151">(no se gasta IA)</text>
+<rect x="760" y="790" width="315" height="104" rx="12" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+<rect x="760" y="790" width="6" height="104" rx="3" fill="#B91C1C"/>
+<text x="920.5" y="820" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Log Errores</text>
+<text x="920.5" y="844" text-anchor="middle" font-size="12.5" fill="#374151">Fallo / JSON inválido IA</text>
+<text x="920.5" y="862" text-anchor="middle" font-size="12.5" fill="#374151">Solicitud → Error</text>
+<rect x="1190" y="790" width="200" height="104" rx="12" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+<rect x="1190" y="790" width="6" height="104" rx="3" fill="#B91C1C"/>
+<text x="1293.0" y="820" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Error Workflow</text>
+<text x="1293.0" y="844" text-anchor="middle" font-size="12.5" fill="#374151">Error Trigger (aparte)</text>
+<text x="1293.0" y="862" text-anchor="middle" font-size="12.5" fill="#374151">registra cualquier falla</text>
+<path d="M 240,202.0 L 270,202.0" fill="none" stroke="#4B5563" stroke-width="2.2" marker-end="url(#m-def)"/>
+<path d="M 470,202.0 L 500,202.0" fill="none" stroke="#15803D" stroke-width="2.2" marker-end="url(#m-ok)"/>
+<rect x="459.2" y="181.0" width="51.599999999999994" height="19" rx="9" fill="#FFFFFF" stroke="#15803D" stroke-width="1"/>
+<text x="485.0" y="195.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#15803D">válido</text>
+<path d="M 700,202.0 L 730,202.0" fill="none" stroke="#4B5563" stroke-width="2.2" marker-end="url(#m-def)"/>
+<path d="M 930,202.0 L 960,202.0" fill="none" stroke="#15803D" stroke-width="2.2" marker-end="url(#m-ok)"/>
+<rect x="915.9" y="181.0" width="58.199999999999996" height="19" rx="9" fill="#FFFFFF" stroke="#15803D" stroke-width="1"/>
+<text x="945.0" y="195.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#15803D">success</text>
+<path d="M 1160,202.0 L 1190,202.0" fill="none" stroke="#15803D" stroke-width="2.2" marker-end="url(#m-ok)"/>
+<rect x="1145.9" y="181.0" width="58.199999999999996" height="19" rx="9" fill="#FFFFFF" stroke="#15803D" stroke-width="1"/>
+<text x="1175.0" y="195.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#15803D">JSON ok</text>
+<path d="M 1390,202.0 L 1420,202.0" fill="none" stroke="#4B5563" stroke-width="2.2" marker-end="url(#m-def)"/>
+<path d="M 1520.0,254 L 1520.0,390" fill="none" stroke="#1D4ED8" stroke-width="2.2" marker-end="url(#m-def)"/>
+<rect x="1451.3" y="313.0" width="137.39999999999998" height="19" rx="9" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1"/>
+<text x="1520.0" y="327.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1D4ED8">pausa hasta decidir</text>
+<path d="M 1420,442.0 L 1390,442.0" fill="none" stroke="#15803D" stroke-width="2.2" marker-end="url(#m-ok)"/>
+<rect x="1392.4" y="421.0" width="25.2" height="19" rx="9" fill="#FFFFFF" stroke="#15803D" stroke-width="1"/>
+<text x="1405.0" y="435.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#15803D">sí</text>
+<path d="M 1190,442.0 L 1160,442.0" fill="none" stroke="#4B5563" stroke-width="2.2" marker-end="url(#m-def)"/>
+<path d="M 960,442.0 L 930,442.0" fill="none" stroke="#4B5563" stroke-width="2.2" marker-end="url(#m-def)"/>
+<path d="M 1520.0,494 L 1520.0,560" fill="none" stroke="#B91C1C" stroke-width="2.2" marker-end="url(#m-err)"/>
+<rect x="1507.4" y="506.0" width="25.2" height="19" rx="9" fill="#FFFFFF" stroke="#B91C1C" stroke-width="1"/>
+<text x="1520.0" y="520.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#B91C1C">no</text>
+<path d="M 370.0,254 L 370.0,790" fill="none" stroke="#B91C1C" stroke-width="2.2" marker-end="url(#m-err)"/>
+<rect x="337.6" y="301" width="64.8" height="19" rx="9" fill="#FFFFFF" stroke="#B91C1C" stroke-width="1"/>
+<text x="370.0" y="315" text-anchor="middle" font-size="11.5" font-weight="600" fill="#B91C1C">inválido</text>
+<path d="M 770,254 L 770,284 L 715,284 L 715,760 L 820,760 L 820,790" fill="none" stroke="#B91C1C" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#m-err)"/>
+<path d="M 1020,254 L 1020,304 L 945,304 L 945,745 L 930,745 L 930,790" fill="none" stroke="#B91C1C" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#m-err)"/>
+<rect x="755.1" y="715" width="229.79999999999998" height="19" rx="9" fill="#FFF" stroke="#B91C1C"/>
+<text x="870" y="729" text-anchor="middle" font-size="11.5" font-weight="600" fill="#B91C1C">salida Error (IA o JSON inválido)</text>
+<path d="M 600.0,254 L 600.0,442.0 L 240,442.0" fill="none" stroke="#B45309" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#m-db)"/>
+<rect x="410" y="412.0" width="150" height="19" rx="9" fill="#FFF" stroke="#B45309"/>
+<text x="485" y="426.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#B45309">lee datos en vivo</text>
+<text x="1402" y="830" font-size="12" fill="#6B7280">Si cualquier nodo</text>
+<text x="1402" y="848" font-size="12" fill="#6B7280">falla sin manejo,</text>
+<text x="1402" y="866" font-size="12" fill="#6B7280">se registra igual.</text>
+<rect x="40" y="930" width="16" height="16" rx="4" fill="#E6F6F4" stroke="#0F766E" stroke-width="2"/>
+<text x="62" y="943" font-size="13" fill="#374151">Disparador</text>
+<rect x="166.0" y="930" width="16" height="16" rx="4" fill="#F1F2F4" stroke="#475569" stroke-width="2"/>
+<text x="188.0" y="943" font-size="13" fill="#374151">Lógica n8n</text>
+<rect x="292.0" y="930" width="16" height="16" rx="4" fill="#FFF4E0" stroke="#B45309" stroke-width="2"/>
+<text x="314.0" y="943" font-size="13" fill="#374151">Airtable (memoria)</text>
+<rect x="478.79999999999995" y="930" width="16" height="16" rx="4" fill="#F1EAFE" stroke="#6D28D9" stroke-width="2"/>
+<text x="500.79999999999995" y="943" font-size="13" fill="#374151">IA (OpenAI)</text>
+<rect x="612.4" y="930" width="16" height="16" rx="4" fill="#E8F0FE" stroke="#1D4ED8" stroke-width="2"/>
+<text x="634.4" y="943" font-size="13" fill="#374151">Human-in-the-loop</text>
+<rect x="791.5999999999999" y="930" width="16" height="16" rx="4" fill="#E8F7EC" stroke="#15803D" stroke-width="2"/>
+<text x="813.5999999999999" y="943" font-size="13" fill="#374151">Salida / KPIs</text>
+<rect x="940.3999999999999" y="930" width="16" height="16" rx="4" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+<text x="962.3999999999999" y="943" font-size="13" fill="#374151">Manejo de errores</text>
+</svg>

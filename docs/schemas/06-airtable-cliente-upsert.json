@@ -1,0 +1,8 @@
+{
+  "_descripcion": "PATCH /v0/{baseId}/Clientes con performUpsert: si el email ya existe actualiza el cliente, si no lo crea. Evita clientes duplicados.",
+  "performUpsert": { "fieldsToMergeOn": ["Email"] },
+  "typecast": true,
+  "records": [
+    { "fields": { "Nombre": "Martin", "Email": "cliente@ejemplo.com", "Telefono": "1123456789" } }
+  ]
+}
